@@ -1,0 +1,35 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.16, pytest-7.2.1, pluggy-1.0.0
+rootdir: /workspace
+collected 15 items
+tests/test_a_environment.py .                                            [  6%]
+tests/test_a_setup.py .                                                  [ 13%]
+tests/test_frq1.py .                                                     [ 20%]
+tests/test_naive_bayes.py ........                                       [ 73%]
+tests/test_scipy.py ..                                                   [ 86%]
+tests/test_utils.py ..                                                   [100%]
+=============================== warnings summary ===============================
+tests/test_naive_bayes.py::test_tiny_dataset_a
+  /workspace/src/naive_bayes.py:152: RuntimeWarning: invalid value encountered in multiply
+    Xmod0pre = (X[np.equal(y,0)].toarray() * self.beta[:,0])
+tests/test_naive_bayes.py::test_tiny_dataset_a
+  /workspace/src/naive_bayes.py:153: RuntimeWarning: invalid value encountered in multiply
+    Xmod1pre = (X[np.equal(y,1)].toarray() * self.beta[:,1])
+tests/test_naive_bayes.py::test_tiny_dataset_b
+  /workspace/src/naive_bayes.py:62: RuntimeWarning: invalid value encountered in multiply
+    py0 = np.sum(np.nan_to_num(X.toarray()*self.beta[:,0]),axis=1)
+tests/test_naive_bayes.py::test_tiny_dataset_b
+tests/test_naive_bayes.py::test_smoothing
+  /usr/local/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: overflow encountered in reduce
+    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+tests/test_naive_bayes.py::test_tiny_dataset_b
+  /workspace/src/naive_bayes.py:63: RuntimeWarning: invalid value encountered in multiply
+    py1 = np.sum(np.nan_to_num(X.toarray()*self.beta[:,1]),axis=1)
+tests/test_naive_bayes.py::test_tiny_dataset_b
+  /workspace/src/naive_bayes_em.py:203: RuntimeWarning: invalid value encountered in multiply
+    beta0term = np.sum(np.nan_to_num(X.toarray() * self.beta[:,0]),axis=1)
+tests/test_naive_bayes.py::test_tiny_dataset_b
+  /workspace/src/naive_bayes_em.py:204: RuntimeWarning: invalid value encountered in multiply
+    beta1term = np.sum(np.nan_to_num(X.toarray() * self.beta[:,1]),axis=1)
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 15 passed, 8 warnings in 3.97s ========================
