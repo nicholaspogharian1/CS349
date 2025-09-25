@@ -1,0 +1,114 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.16, pytest-7.2.1, pluggy-1.0.0
+rootdir: /workspace
+collected 16 items
+tests/test_a_environment.py ..                                           [ 12%]
+tests/test_a_setup.py F                                                  [ 18%]
+tests/test_distances.py FFF                                              [ 37%]
+tests/test_generate_regression_data.py FF                                [ 50%]
+tests/test_knn.py FFFFF                                                  [ 81%]
+tests/test_metrics.py F                                                  [ 87%]
+tests/test_polynomial_regression.py FF                                   [100%]
+=================================== FAILURES ===================================
+__________________________________ test_setup __________________________________
+>           assert guess is not None, msg
+E           AssertionError: Is nap5890_q1.pdf actually a pdf?
+E           assert None is not None
+tests/test_a_setup.py:30: AssertionError
+___________________________ test_euclidean_distances ___________________________
+>       _est = src.euclidean_distances(x, y)
+tests/test_distances.py:10:
+>       raise NotImplementedError
+E       NotImplementedError
+src/distances.py:18: NotImplementedError
+___________________________ test_manhattan_distances ___________________________
+>       _est = src.manhattan_distances(x, y)
+tests/test_distances.py:21:
+>       raise NotImplementedError
+E       NotImplementedError
+src/distances.py:35: NotImplementedError
+____________________________ test_cosine_distances _____________________________
+>       _est = src.cosine_distances(x, y)
+tests/test_distances.py:32:
+>       raise NotImplementedError
+E       NotImplementedError
+src/distances.py:52: NotImplementedError
+________________________ test_generate_regression_data _________________________
+>                   x, y = generate_regression_data(degree, n, amount_of_noise=amount_of_noise)
+tests/test_generate_regression_data.py:26:
+>       raise NotImplementedError
+E       NotImplementedError
+src/generate_regression_data.py:56: NotImplementedError
+_________________________ test_generate_random_numbers _________________________
+>                   x, coefs, noise = generate_random_numbers(degree, n, amount_of_noise)
+tests/test_generate_regression_data.py:65:
+>       raise NotImplementedError
+E       NotImplementedError
+src/generate_regression_data.py:25: NotImplementedError
+_____________________________ test_knn_aggregators _____________________________
+>       mode_aggregator.fit(X, y)
+tests/test_knn.py:45:
+>       raise NotImplementedError
+E       NotImplementedError
+src/k_nearest_neighbor.py:59: NotImplementedError
+_______________________________ test_knn_k_is_1 ________________________________
+>                   accuracy = run(datasets[key], fraction,
+                                   n_neighbors=1,
+                                   distance_measure=distance_measure,
+                                   aggregator="mode")
+tests/test_knn.py:67:
+>       raise NotImplementedError
+E       NotImplementedError
+src/k_nearest_neighbor.py:59: NotImplementedError
+______________________________ test_knn_k_is_big _______________________________
+>           model.fit(features, targets)
+tests/test_knn.py:86:
+>       raise NotImplementedError
+E       NotImplementedError
+src/k_nearest_neighbor.py:59: NotImplementedError
+_____________________________ test_knn_comparisons _____________________________
+>           acc_a = run(data_path, fraction, **kwargs_a)
+tests/test_knn.py:109:
+>       raise NotImplementedError
+E       NotImplementedError
+src/k_nearest_neighbor.py:59: NotImplementedError
+_____________________________ test_knn_regression ______________________________
+>                   x, y = generate_regression_data(degree, amount, amount_of_noise=0.0)
+tests/test_knn.py:132:
+>       raise NotImplementedError
+E       NotImplementedError
+src/generate_regression_data.py:56: NotImplementedError
+___________________________ test_mean_squared_error ____________________________
+>       _est = src_mse(y_true, y_pred)
+tests/test_metrics.py:14:
+>       raise NotImplementedError
+E       NotImplementedError
+src/metrics.py:22: NotImplementedError
+______________________ test_polynomial_regression_basics _______________________
+>       x, y = generate_regression_data(3, 10, amount_of_noise=1)
+tests/test_polynomial_regression.py:9:
+>       raise NotImplementedError
+E       NotImplementedError
+src/generate_regression_data.py:56: NotImplementedError
+_______________________ test_polynomial_regression_full ________________________
+>           p = PolynomialRegression(degree)
+tests/test_polynomial_regression.py:38:
+>       raise NotImplementedError
+E       NotImplementedError
+src/regression.py:26: NotImplementedError
+=========================== short test summary info ============================
+FAILED tests/test_a_setup.py::test_setup - AssertionError: Is nap5890_q1.pdf ...
+FAILED tests/test_distances.py::test_euclidean_distances - NotImplementedError
+FAILED tests/test_distances.py::test_manhattan_distances - NotImplementedError
+FAILED tests/test_distances.py::test_cosine_distances - NotImplementedError
+FAILED tests/test_generate_regression_data.py::test_generate_regression_data
+FAILED tests/test_generate_regression_data.py::test_generate_random_numbers
+FAILED tests/test_knn.py::test_knn_aggregators - NotImplementedError
+FAILED tests/test_knn.py::test_knn_k_is_1 - NotImplementedError
+FAILED tests/test_knn.py::test_knn_k_is_big - NotImplementedError
+FAILED tests/test_knn.py::test_knn_comparisons - NotImplementedError
+FAILED tests/test_knn.py::test_knn_regression - NotImplementedError
+FAILED tests/test_metrics.py::test_mean_squared_error - NotImplementedError
+FAILED tests/test_polynomial_regression.py::test_polynomial_regression_basics
+FAILED tests/test_polynomial_regression.py::test_polynomial_regression_full
+========================= 14 failed, 2 passed in 0.81s =========================

@@ -1,0 +1,22 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.16, pytest-7.2.1, pluggy-1.0.0
+rootdir: /workspace
+collected 16 items / 15 deselected / 1 selected
+tests/test_a_setup.py F
+======================
+Output of autograder
+======================
+# of tests:	0/1 tests passed
+Overall score:	0/100
+======================
+FAIL - REQUIRED (automatic zero) test_setup
+======================
+=================================== FAILURES ===================================
+__________________________________ test_setup __________________________________
+>           assert guess is not None, msg
+E           AssertionError: Is nap5890_q1.pdf actually a pdf?
+E           assert None is not None
+tests/test_a_setup.py:30: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_a_setup.py::test_setup - AssertionError: Is nap5890_q1.pdf ...
+======================= 1 failed, 15 deselected in 0.33s =======================

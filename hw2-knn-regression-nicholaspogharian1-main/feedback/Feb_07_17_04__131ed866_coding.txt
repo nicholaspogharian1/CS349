@@ -1,0 +1,27 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.16, pytest-7.2.1, pluggy-1.0.0
+rootdir: /workspace
+collected 16 items
+tests/test_a_environment.py ..                                           [ 12%]
+tests/test_a_setup.py F                                                  [ 18%]
+tests/test_distances.py ...                                              [ 37%]
+tests/test_generate_regression_data.py ..                                [ 50%]
+tests/test_knn.py .....                                                  [ 81%]
+tests/test_metrics.py .                                                  [ 87%]
+tests/test_polynomial_regression.py ..                                   [100%]
+=================================== FAILURES ===================================
+__________________________________ test_setup __________________________________
+>           assert guess is not None, msg
+E           AssertionError: Is nap5890_q1.pdf actually a pdf?
+E           assert None is not None
+tests/test_a_setup.py:30: AssertionError
+=============================== warnings summary ===============================
+tests/test_knn.py::test_knn_k_is_1
+tests/test_knn.py::test_knn_k_is_1
+tests/test_knn.py::test_knn_k_is_1
+  /workspace/src/distances.py:55: RuntimeWarning: invalid value encountered in scalar divide
+    result[i][j]=1-((X[i]@Y[j]) / (np.linalg.norm(X[i])*np.linalg.norm(Y[j])))
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_a_setup.py::test_setup - AssertionError: Is nap5890_q1.pdf ...
+=================== 1 failed, 15 passed, 3 warnings in 8.26s ===================
