@@ -1,0 +1,120 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.16, pytest-7.2.1, pluggy-1.0.0
+rootdir: /workspace
+collected 18 items
+tests/test_a_environment.py ..                                           [ 11%]
+tests/test_a_setup.py .                                                  [ 16%]
+tests/test_custom_transform.py F                                         [ 22%]
+tests/test_loss.py FF                                                    [ 33%]
+tests/test_model.py FFFF                                                 [ 55%]
+tests/test_perceptron.py FF                                              [ 66%]
+tests/test_regularization.py FFF                                         [ 83%]
+tests/test_relu.py FFF                                                   [100%]
+=================================== FAILURES ===================================
+____________________________ test_custom_transform _____________________________
+>       new_X = custom_transform(X)
+tests/test_custom_transform.py:12:
+>       raise NotImplementedError
+E       NotImplementedError
+src/data_transform.py:22: NotImplementedError
+___________________________ test_squared_loss_basics ___________________________
+>       assert loss.forward(A, B) == mean_squared_error(A, B)
+tests/test_loss.py:18:
+>       raise NotImplementedError
+E       NotImplementedError
+src/loss.py:51: NotImplementedError
+____________________________ test_squared_loss_fit _____________________________
+>       pred_before = model.forward(X)
+tests/test_loss.py:48:
+>       raise NotImplementedError
+E       NotImplementedError
+src/model.py:38: NotImplementedError
+______________________________ test_model_forward ______________________________
+>       pred = model.forward(X)
+tests/test_model.py:17:
+>       raise NotImplementedError
+E       NotImplementedError
+src/model.py:38: NotImplementedError
+_____________________________ test_model_backward ______________________________
+>           model.backward(0.5 * np.ones_like(y), y)
+tests/test_model.py:49:
+>       raise NotImplementedError
+E       NotImplementedError
+src/model.py:53: NotImplementedError
+______________________________ test_model_fit_xor ______________________________
+>       pred_before = model.forward(X)
+tests/test_model.py:90:
+>       raise NotImplementedError
+E       NotImplementedError
+src/model.py:38: NotImplementedError
+____________________________ test_model_fit_circles ____________________________
+>       model.fit(X, y, max_iter)
+tests/test_model.py:147:
+>       raise NotImplementedError
+E       NotImplementedError
+src/model.py:66: NotImplementedError
+_______________________________ test_perceptron ________________________________
+>       num_iter_to_converge = p.fit(features, targets)
+tests/test_perceptron.py:11:
+>       raise NotImplementedError
+E       NotImplementedError
+src/perceptron.py:87: NotImplementedError
+__________________________ test_polynomial_perceptron __________________________
+>       num_iter = p.fit(features, targets)
+tests/test_perceptron.py:36:
+>       raise NotImplementedError
+E       NotImplementedError
+src/perceptron.py:87: NotImplementedError
+________________________________ test_l1_basics ________________________________
+>       grad = regularizer.grad(X)
+tests/test_regularization.py:18:
+>       raise NotImplementedError
+E       NotImplementedError
+src/regularization.py:36: NotImplementedError
+________________________________ test_l2_basics ________________________________
+>       grad = regularizer.grad(X)
+tests/test_regularization.py:39:
+>       raise NotImplementedError
+E       NotImplementedError
+src/regularization.py:49: NotImplementedError
+_______________________ test_regularization_fit_circles ________________________
+>               model.fit(X, y, 100)
+tests/test_regularization.py:71:
+>       raise NotImplementedError
+E       NotImplementedError
+src/model.py:66: NotImplementedError
+_______________________________ test_relu_basics _______________________________
+>       forward = relu.forward(X)
+tests/test_relu.py:17:
+>       raise NotImplementedError
+E       NotImplementedError
+src/layers.py:45: NotImplementedError
+______________________________ test_relu_fit_xor _______________________________
+>       pred_before = model.forward(X)
+tests/test_relu.py:46:
+>       raise NotImplementedError
+E       NotImplementedError
+src/model.py:38: NotImplementedError
+____________________________ test_relu_fit_circles _____________________________
+>       model.fit(X, y, 2000)
+tests/test_relu.py:72:
+>       raise NotImplementedError
+E       NotImplementedError
+src/model.py:66: NotImplementedError
+=========================== short test summary info ============================
+FAILED tests/test_custom_transform.py::test_custom_transform - NotImplemented...
+FAILED tests/test_loss.py::test_squared_loss_basics - NotImplementedError
+FAILED tests/test_loss.py::test_squared_loss_fit - NotImplementedError
+FAILED tests/test_model.py::test_model_forward - NotImplementedError
+FAILED tests/test_model.py::test_model_backward - NotImplementedError
+FAILED tests/test_model.py::test_model_fit_xor - NotImplementedError
+FAILED tests/test_model.py::test_model_fit_circles - NotImplementedError
+FAILED tests/test_perceptron.py::test_perceptron - NotImplementedError
+FAILED tests/test_perceptron.py::test_polynomial_perceptron - NotImplementedE...
+FAILED tests/test_regularization.py::test_l1_basics - NotImplementedError
+FAILED tests/test_regularization.py::test_l2_basics - NotImplementedError
+FAILED tests/test_regularization.py::test_regularization_fit_circles - NotImp...
+FAILED tests/test_relu.py::test_relu_basics - NotImplementedError
+FAILED tests/test_relu.py::test_relu_fit_xor - NotImplementedError
+FAILED tests/test_relu.py::test_relu_fit_circles - NotImplementedError
+========================= 15 failed, 3 passed in 1.54s =========================
