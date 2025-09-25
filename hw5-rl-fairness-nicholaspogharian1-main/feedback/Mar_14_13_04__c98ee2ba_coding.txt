@@ -1,0 +1,17 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.16, pytest-7.2.2, pluggy-1.0.0
+rootdir: /workspace
+collected 10 items
+tests/test_a_environment.py ..                                           [ 20%]
+tests/test_a_setup.py .                                                  [ 30%]
+tests/test_bandit.py ...                                                 [ 60%]
+tests/test_q_learning.py ....                                            [100%]
+=============================== warnings summary ===============================
+tests/test_bandit.py::test_bandit_slots
+  /usr/local/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3464: RuntimeWarning: Mean of empty slice.
+    return _methods._mean(a, axis=axis, dtype=dtype,
+tests/test_bandit.py::test_bandit_slots
+  /usr/local/lib/python3.9/site-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+    ret = ret.dtype.type(ret / rcount)
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 10 passed, 2 warnings in 1.27s ========================
